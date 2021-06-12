@@ -61,7 +61,9 @@
               </div>
             </div>
             <div class="dropdown-lk">
-              <a href="#" class="lk-btn"><span></span> Личный кабинет</a>
+              <a href="#" class="lk-btn">
+                <img class="lk-btn-img" src="<?php echo bloginfo('template_url') ?>/assets/images/person.png" alt="">
+                <span></span> Личный кабинет</a>
             </div>
             <div class="mobile-menu">
 
@@ -89,7 +91,9 @@
             <div class="cleaner"></div>
           </div>
 
-          <a href="#" class="lk-btn">Личный кабинет</a>
+          <a href="#" class="lk-btn">
+          <img class="lk-btn-img" src="<?php echo bloginfo('template_url') ?>/assets/images/person.png" alt="">
+          Личный кабинет</a>
         </div>
       </div>
     </div>

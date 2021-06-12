@@ -15,6 +15,9 @@ body {
   overflow-x: hidden;
   
 }
+.main-description {
+  margin-bottom: 20px;
+}
 .main-wrapper {
   min-height: 100%;
   height: auto !important;
@@ -904,8 +907,9 @@ transition: all 200ms ease-out;
   font-size: 14px;
 }
 .dropdown-lk a span{
-  background: url(../images/person.png) 0 0 no-repeat;
-  width: 40px;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 20px;
   height: 17px;
   border-right: 1px solid rgba(255,255,255,0.3);
   display: inline-block;
@@ -1737,7 +1741,8 @@ ul.tabs li.current{
   height: 90px;
 }
 .header-slider{
-  background: url(../images/header.jpg) right 0 no-repeat;
+  background-position: right 0;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .header-tel{
@@ -1924,7 +1929,8 @@ transition: all 200ms ease-out;
   background: #C92620;
 }
 .lk-btn:after{
-  background: url(../images/person.png) 0 0 no-repeat;
+  background-position: 0 0;
+  background-repeat: no-repeat;
   width: 40px;
   height: 17px;
   border-right: 1px solid rgba(255,255,255,0.3);
@@ -1933,6 +1939,11 @@ transition: all 200ms ease-out;
   top: 50%;
   margin-top: -9px;
   left: 20px;
+}
+a img.lk-btn-img {
+  position: absolute;
+  left: 20px;
+  top: 20px;
 }
 .header .dropdown{
   display: none !important;

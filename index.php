@@ -1,15 +1,14 @@
 <?php get_header() ?>
 
-<div class="header-slider white">
+<div class="header-slider white" style="background-image: url(<?php the_field('main-img') ?>)">
   <div class="table">
     <div class="table-cell">
       <div class="container">
-        <div class="title">Финколлект</div>
-        <p>
-          Уважение к нашим партнерам, их заемщикам и нашим сотрудникам – <br />
-          залог благоприятного и долгосрочного сотрудничества.
+        <div class="title"><?php the_field('main-title') ?></div>
+        <p class="main-description">
+          <?php the_field('main-description') ?>
         </p>
-        <a href="#" class="button min dark-btn">Подробнее</a>
+        <a href="<?php the_field('main-btn') ?>" class="button min dark-btn">Подробнее</a>
       </div>
     </div>
   </div>
