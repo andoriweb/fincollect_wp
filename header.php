@@ -15,6 +15,9 @@
     href='https://fonts.googleapis.com/css?family=Open+Sans:600,400,300,400italic,600,700,700italic,800&subset=latin,cyrillic'
     rel='stylesheet' type='text/css'>
 
+  <!-- <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet"> -->
+
     <?php wp_head() ?>
 
 </head>
@@ -26,14 +29,14 @@
         <div class="header relative">
           <div class="logo">
             <a href="<?php bloginfo('url'); ?>">
-              <img src="images/logo-xs.png" alt="logo" class="visible-xs visible-sm" />
-              <img src="images/logo.png" alt="logo" class="hidden-xs hidden-sm" />
+              <img src="<?php the_field('mobile-logo', 2) ?>" alt="logo" class="visible-xs visible-sm" />
+              <img src="<?php the_field('big-logo', 2) ?>" alt="logo" class="hidden-xs hidden-sm" />
             </a>
           </div>
           <a href="#callback" class="button invert min callback-btn fancyboxModal hidden-xs hidden-sm">Обратный
             звонок</a>
           <div class="header-tel hidden-xs hidden-sm">
-            <div>8 (800) 700-77-46</div>
+            <div><?php the_field('phone', 2) ?></div>
             <small>Звонок по РФ бесплатный </small>
           </div>
           <div class="mob-menu-btn visible-xs visible-sm">
@@ -46,7 +49,7 @@
               <div class="row">
                 <div class="col-sm-6">
                   <div class="dropdown-tel">
-                    <div>8 (800) 700-77-46</div>
+                    <div><?php the_field('phone', 2) ?></div>
                     <small>Звонок по РФ бесплатный </small>
                   </div>
                 </div>

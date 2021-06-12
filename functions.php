@@ -4,6 +4,7 @@
   add_action( 'wp_enqueue_scripts', 'fincollect_styles' );
   function fincollect_styles() {
     wp_enqueue_style( 'main-style', get_stylesheet_uri() );
+    // wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css' );
     wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/assets/css/jquery.fancybox.css' );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css' );
   }
