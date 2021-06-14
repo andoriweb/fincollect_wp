@@ -3,10 +3,11 @@
   /* Подключение стилей */
   add_action( 'wp_enqueue_scripts', 'fincollect_styles' );
   function fincollect_styles() {
-    wp_enqueue_style( 'main-style', get_stylesheet_uri() );
+    
     // wp_enqueue_style( 'style', get_template_directory_uri() . '/assets/css/style.css' );
     wp_enqueue_style( 'fancybox', get_template_directory_uri() . '/assets/css/jquery.fancybox.css' );
     wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.css' );
+    wp_enqueue_style( 'main-style', get_stylesheet_uri() );
   }
 
   /* Подключение скриптов */
@@ -32,7 +33,20 @@
   /* Превьюшки для постов */
   add_theme_support( 'post-thumbnails' );
 
- 
+  // удаляет H2 из шаблона пагинации
+  add_filter('navigation_markup_template', 'my_navigation_template', 10, 2 );
+  function my_navigation_template( $template, $class ){
+    return '
+      <div class="col-md-12">
+        <hr>
+        <div class="pagination text-center"
+          <nav class="text-center navigation %1$s" role="navigation">
+            <div>%3$s</div>
+          </nav> 
+        </div>
+      </div>
+    ';
+  }
 
 
 

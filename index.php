@@ -1,4 +1,11 @@
-<?php get_header() ?>
+<?php 
+
+/* 
+Template name: Главная
+*/
+
+get_header() 
+?>
 
 <div class="header-slider white" style="background-image: url(<?php the_field('main-img') ?>)">
   <div class="table">
