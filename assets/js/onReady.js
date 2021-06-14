@@ -595,7 +595,10 @@ $(function(){
     
     $('.printBtn').click(function(){
         win.print();
-        
+    });
+
+    $( function() {
+        $('audio').audioPlayer();
     });
     
     

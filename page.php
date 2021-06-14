@@ -31,7 +31,7 @@
                         </div>
                         <div class="push15"></div>
                         <a href="<?php the_permalink(); ?>" class="decoration black">
-                            <?php the_excerpt(); ?>
+                            <?php echo pietergoosen_custom_excerpts(20); ?>
                         </a>
                         <div class="push5"></div>
                         <div class="news-date red"><?php echo get_the_date('d.m.y'); ?></div>

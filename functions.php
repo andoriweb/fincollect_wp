@@ -48,6 +48,11 @@
     ';
   }
 
+  // Сократить excerpt
+  function pietergoosen_custom_excerpts($limit) { return wp_trim_words(get_the_excerpt(), $limit, '<a href="'. esc_url( get_permalink() ) . '">' . '&nbsp;&hellip;' . __( 'Read more &nbsp;&raquo;', 'pietergoosen' ) . '</a>'); } 
+  
+
+
 
 
 
