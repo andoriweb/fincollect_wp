@@ -29,6 +29,9 @@
     register_nav_menu( 'mobile-menu', 'Мобильное меню' );
   }
 
+  /* Превьюшки для постов */
+  add_theme_support( 'post-thumbnails' );
+
  
 
 

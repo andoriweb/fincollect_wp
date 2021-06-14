@@ -19,7 +19,55 @@
     <div class="title-h2"><span class="red">С кем мы</span> работаем</div>
     <div class="push10"></div>
     <div class="partners-carousel">
-      <div class="item">
+
+    <?php
+        // параметры по умолчанию
+        $posts = get_posts( array(
+          'numberposts' => 0,
+          'category'    => 4,
+          'orderby'     => 'date',
+          'order'       => 'DESC',
+          'include'     => array(),
+          'exclude'     => array(),
+          'meta_key'    => '',
+          'meta_value'  =>'',
+          'post_type'   => 'post',
+          'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+        ) );
+
+        foreach( $posts as $post ){
+          setup_postdata($post);
+        ?>
+
+          <div class="item">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="img-wrapper">
+                  <?php the_post_thumbnail( 'medium' ) ?>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="element-content">
+                  <div class="push30 hidden-md"></div>
+                  <div class="title f24"><?php the_title(); ?></div>
+                  <div class="push5"></div>
+                  <div class="text">
+                    <?php the_content(  ); ?>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      <?php
+        }
+
+        wp_reset_postdata(); // сброс
+      ?>
+
+      
+
+      <!-- <div class="item">
         <div class="row">
           <div class="col-md-6">
             <div class="img-wrapper">
@@ -40,6 +88,7 @@
           </div>
         </div>
       </div>
+
       <div class="item">
         <div class="row">
           <div class="col-md-6">
@@ -60,28 +109,8 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="item">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="img-wrapper">
-              <img src="images/partner1.jpg" />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="element-content">
-              <div class="push30 hidden-md"></div>
-              <div class="title f24">Быстроденьги</div>
-              <div class="push5"></div>
-              <div class="text">
-                «Быстроденьги» – крупная федеральная компания на рынке микрофинансирования с разветвленной сетью
-                офисов финансовой помощи по всей стране. Это первая организация в России, предложившая населению
-                услугу «займы до зарплаты» — небольшие суммы денег в долг на короткий срок.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      </div> -->
+
     </div>
     <div class="push100"></div>
   </div>
