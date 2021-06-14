@@ -31,4 +31,10 @@
         <div class="footer-push"></div>
     </div>
 
+    <script>
+    $( function() {
+        $('audio').audioPlayer();
+    });
+    </script>
+
 <?php get_footer() ?>

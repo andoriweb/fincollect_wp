@@ -126,6 +126,11 @@ h3,
 /* h4{
 
 } */
+
+div.text a#more{
+  color: red;
+}
+
 .decoration-none{
   text-decoration: none !important;
 }
@@ -159,9 +164,9 @@ h3,
 .black{
   color: #000;
 }
-/* p{
+p{
   margin-bottom: 20px;
-} */
+}
 a{
   color: #E32924;
 }
@@ -415,6 +420,9 @@ textarea:focus:-ms-input-placeholder{
 }
 textarea:focus::-webkit-input-placeholder{
   opacity: 0;
+}
+textarea.form-control {
+  height: 50px;
 }
 .strike{
   text-decoration: line-through;
@@ -1134,7 +1142,6 @@ transition: all 200ms ease-out;
   color: #333333;
 }
 /*select styler end*/
-
 
 
 

@@ -597,16 +597,14 @@ $(function(){
         win.print();
     });
 
-    $( function() {
-        $('audio').audioPlayer();
-    });
+    
     
     
 
 
 //end print block
 
-
+    
     
 
 

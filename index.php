@@ -125,7 +125,7 @@ get_header()
               </div>
               <div class="text">
                 <a href="<?php the_permalink(); ?>">
-                  <?php the_excerpt(  ); ?>
+                <?php echo pietergoosen_custom_excerpts(10); ?>
                 </a>
               </div>
             </div>
