@@ -65,52 +65,6 @@
         wp_reset_postdata(); // сброс
       ?>
 
-      
-
-      <!-- <div class="item">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="img-wrapper">
-              <img src="images/partner1.jpg" />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="element-content">
-              <div class="push30 hidden-md"></div>
-              <div class="title f24">Быстроденьги</div>
-              <div class="push5"></div>
-              <div class="text">
-                «Быстроденьги» – крупная федеральная компания на рынке микрофинансирования с разветвленной сетью
-                офисов финансовой помощи по всей стране. Это первая организация в России, предложившая населению
-                услугу «займы до зарплаты» — небольшие суммы денег в долг на короткий срок.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="item">
-        <div class="row">
-          <div class="col-md-6">
-            <div class="img-wrapper">
-              <img src="images/partner1.jpg" />
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="element-content">
-              <div class="push30 hidden-md"></div>
-              <div class="title f24">Быстроденьги</div>
-              <div class="push5"></div>
-              <div class="text">
-                «Быстроденьги» – крупная федеральная компания на рынке микрофинансирования с разветвленной сетью
-                офисов финансовой помощи по всей стране. Это первая организация в России, предложившая населению
-                услугу «займы до зарплаты» — небольшие суммы денег в долг на короткий срок.
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> -->
-
     </div>
     <div class="push100"></div>
   </div>
@@ -122,23 +76,11 @@
     <p>
       Вы можете оплатить вашу задолженность онлайн и уточнить о поступлении денежных средств по номеру горячей линии.
     </p>
+
     <form class="rf">
-      <div class="row">
-        <div class="col-sm-4">
-          <div class="form-group">
-            <input type="text" class="form-control required" placeholder="Номер договора" />
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="form-group">
-            <input type="text" class="form-control required" placeholder="Сумма" />
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <input type="submit" class="button btn block" value="Оплатить" />
-        </div>
-      </div>
+        <?php echo do_shortcode( '[contact-form-7 id="65" title="Контактная форма 1"]' ) ?>
     </form>
+
   </div>
   <div class="push20"></div>
 </div>
