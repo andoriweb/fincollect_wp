@@ -97,48 +97,45 @@ get_header()
     <div class="title-h2">Новости</div>
     <div class="push5"></div>
     <div class="row">
-      <div class="col-md-4">
-        <div class="element relative">
-          <div class="date">
-            <div>04</div>
-            <small>апреля</small>
+
+      
+      <?php
+        // параметры по умолчанию
+        $posts = get_posts( array(
+          'numberposts' => 3,
+          'category'    => 5,
+          'orderby'     => 'date',
+          'order'       => 'DESC',
+          'include'     => array(),
+          'exclude'     => array(),
+          'meta_key'    => '',
+          'meta_value'  =>'',
+          'post_type'   => 'post',
+          'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+        ) );
+
+        foreach( $posts as $post ){
+          setup_postdata($post);
+        ?>
+          <div class="col-md-4">
+            <div class="element relative">
+              <div class="date">
+                <div><?php echo get_the_date('d'); ?></div>
+                <small><?php echo get_the_date('F'); ?></small>
+              </div>
+              <div class="text">
+                <a href="<?php the_permalink(); ?>">
+                  <?php the_excerpt(  ); ?>
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="text">
-            <a href="#">
-              Запустила продажу сертификатов
-              на оказание юридических услуг
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="element relative">
-          <div class="date">
-            <div>04</div>
-            <small>апреля</small>
-          </div>
-          <div class="text">
-            <a href="#">
-              Запустила продажу сертификатов
-              на оказание юридических услуг
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="element relative">
-          <div class="date">
-            <div>04</div>
-            <small>апреля</small>
-          </div>
-          <div class="text">
-            <a href="#">
-              Запустила продажу сертификатов
-              на оказание юридических услуг
-            </a>
-          </div>
-        </div>
-      </div>
+        <?php
+          }
+
+        wp_reset_postdata(); // сброс
+      ?>
+
     </div>
   </div>
   <div class="push40"></div>
