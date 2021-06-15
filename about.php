@@ -5,7 +5,7 @@ Template Name: О компании
 
 get_header();
 ?>
-<div class="header-slider white about-slide" style="background-image: url(<?php the_field('about-bg') ?>);">
+<div class="header-slider white about-slide" id="about" style="background-image: url(<?php the_field('about-bg') ?>);">
     <div class="table">
         <div class="table-cell">
             <div class="container">
@@ -41,7 +41,7 @@ get_header();
     </div>
     <div class="push25"></div>
 </div>
-<div class="worth gray-bg">
+<div class="worth gray-bg" id="value">
     <div class="push40"></div>
     <div class="container">
         <div class="title-h2"><span class="red">наши</span> ценности</div>
@@ -93,7 +93,7 @@ get_header();
     </div>
     <div class="push20"></div>
 </div>
-<div class="docs">
+<div class="docs" id="docs">
     <div class="push40"></div>
     <div class="container">
         <div class="title-h2">Документы</div>
@@ -140,79 +140,58 @@ get_header();
     <div class="push30"></div>
 </div>
 
-<div class="association gray-bg">
+<div class="association gray-bg" id="association">
     <div class="push45"></div>
     <div class="container">
         <div class="title-h2"><span class="red">Участие</span> в ассоциациях</div>
         <div class="push10"></div>
         <div class="partners-carousel">
-            <div class="item">
-                <div class="row">
+
+            <?php
+            // параметры по умолчанию
+            $posts = get_posts( array(
+            'numberposts' => 0,
+            'category'    => 6,
+            'orderby'     => 'date',
+            'order'       => 'DESC',
+            'include'     => array(),
+            'exclude'     => array(),
+            'meta_key'    => '',
+            'meta_value'  =>'',
+            'post_type'   => 'post',
+            'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
+            ) );
+
+            foreach( $posts as $post ){
+            setup_postdata($post);
+            ?>
+
+                <div class="item">
+                    <div class="row">
                     <div class="col-md-6">
                         <div class="img-wrapper">
-                            <img src="images/napka.jpg" />
+                        <?php the_post_thumbnail( 'medium' ) ?>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="element-content">
-                            <div class="push30 hidden-md"></div>
-                            <div class="title f24">Национальная ассоциация профессиональных коллекторских агентств
-                                (НАПКА)</div>
-                            <div class="push5"></div>
-                            <div class="text">
-                                «Быстроденьги» – крупная федеральная компания на рынке микрофинансирования с
-                                разветвленной сетью офисов финансовой помощи по всей стране.
-                            </div>
+                        <div class="push30 hidden-md"></div>
+                        <div class="title f24"><?php the_title(); ?></div>
+                        <div class="push5"></div>
+                        <div class="text">
+                            <?php the_content(  ); ?>
                         </div>
+                        </div>
+                    </div>
                     </div>
                 </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="img-wrapper">
-                            <img src="images/partner1.jpg" />
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="element-content">
-                            <div class="push30 hidden-md"></div>
-                            <div class="title f24">Быстроденьги</div>
-                            <div class="push5"></div>
-                            <div class="text">
-                                «Быстроденьги» – крупная федеральная компания на рынке микрофинансирования с
-                                разветвленной сетью
-                                офисов финансовой помощи по всей стране. Это первая организация в России, предложившая
-                                населению
-                                услугу «займы до зарплаты» — небольшие суммы денег в долг на короткий срок.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="item">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="img-wrapper">
-                            <img src="images/partner1.jpg" />
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="element-content">
-                            <div class="push30 hidden-md"></div>
-                            <div class="title f24">Быстроденьги</div>
-                            <div class="push5"></div>
-                            <div class="text">
-                                «Быстроденьги» – крупная федеральная компания на рынке микрофинансирования с
-                                разветвленной сетью
-                                офисов финансовой помощи по всей стране. Это первая организация в России, предложившая
-                                населению
-                                услугу «займы до зарплаты» — небольшие суммы денег в долг на короткий срок.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
+            <?php
+                }
+
+                wp_reset_postdata(); // сброс
+            ?>
+
         </div>
         <div class="push100"></div>
         <div class="push10"></div>
