@@ -15,7 +15,7 @@
             $args = array(
                 'paged'         => ( get_query_var('paged') ? get_query_var('paged') : 1 ),
                 'post_type'   => 'post',
-                'category__not_in'    => array( '4', '6', '7' ),
+                'category__not_in'    => array( '4', '6', '7', '8', '9' ),
                 'suppress_filters' => true, // подавление работы фильтров изменения SQL запроса
             );
             query_posts( $args );
