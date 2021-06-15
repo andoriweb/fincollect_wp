@@ -67,6 +67,10 @@ body {
   background: #E32924;
   border-radius: 50%;
 }
+/* .content ul > li:last-child:after{
+  
+  
+} */
 .content ul ul,
 .content ol ul,
 .content ol ol,
