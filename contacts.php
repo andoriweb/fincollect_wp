@@ -21,13 +21,13 @@ get_header();
                                 </p>
                                 <p>
                                     <strong>E-mail </strong><br />
-                                    <a href="<?php the_field('e-mail') ?>" class="decoration">mail@mail.ru</a>
+                                    <a href="<?php the_field('e-mail') ?>" class="decoration"><?php the_field('e-mail') ?></a>
                                 </p>
                                 <p>
                                     <strong>Контакты для СМИ </strong><br />
                                     <?php the_field('phone', 2) ?>
                                     <br>
-                                    <a href="<?php the_field('contact-cmi') ?>" class="decoration">info@fincollect.ru</a>
+                                    <a href="<?php the_field('contact-cmi') ?>" class="decoration"><?php the_field('contact-cmi') ?></a>
                                 </p>
                             </div>
                         </div>

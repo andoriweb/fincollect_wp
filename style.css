@@ -1013,7 +1013,8 @@ transition: all 200ms ease-out;
   margin-bottom: 10px;
 }
 .header-slider.about-slide{
-  background: url(../images/about-slide.jpg) 50% 0 no-repeat;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 .icons-list .element{
