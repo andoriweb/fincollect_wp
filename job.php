@@ -5,7 +5,7 @@
 
 get_header();
 ?>
-<div class="job-wrapper">
+<div class="job-wrapper" id="job">
     <div class="push35"></div>
     <div class="container">
         <h1>Карьера</h1>
@@ -72,7 +72,7 @@ get_header();
         <hr />
     </div>
 
-    <div class="vacancy">
+    <div class="vacancy" id="vacancy">
         <div class="push25"></div>
         <div class="container">
             <div class="title-h2">Вакансии</div>
@@ -198,15 +198,15 @@ get_header();
 
             </div>
             <div class="push45"></div>
-            <div class="manager">
+            <div class="manager" id="manager">
                 <div class="title-h2"><span class="red">Контакты менеджеров</span> по персоналу</div>
                 <p>Подробная информация по телефонам:</p>
                 <div class="row">
                     <div class="col-sm-6">
-                        +7 (960) 363-84-18 — Дарья
+                        <?php the_field('manager-phone-1') ?> — <?php the_field('manager-name-1') ?>
                     </div>
                     <div class="col-sm-6">
-                        +7 (964) 859-26-14 — Яна
+                        <?php the_field('manager-phone-2') ?> — <?php the_field('manager-name-2') ?>
                     </div>
                 </div>
             </div>
