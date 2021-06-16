@@ -5,7 +5,7 @@
 
 get_header();
 ?>
-<div class="clients-wrapper">
+<div class="clients-wrapper" id="clients">
     <div class="push35"></div>
     <div class="container">
         <h1>Клиентам</h1>
@@ -163,7 +163,7 @@ get_header();
                         </div>
                     </div>
                 </div>
-                <div class="gray-bg">
+                <div class="gray-bg" id="gray">
                     <div class="push40"></div>
                     <div class="container">
                         <div class="title-h2"><span class="red">Сообщить о погашении </span> задолженности</div>
@@ -173,46 +173,6 @@ get_header();
 
                             <?php echo do_shortcode('[contact-form-7 id="306" title="Форма о погашении"]') ?>
 
-                            <!-- <div class="row">
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control required" placeholder="ФИО" />
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <input type="text" class="form-control required"
-                                                    placeholder="Номер договора" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="row">
-                                        <div class="col-sm-6">
-                                            <div class="form-group">
-                                                <div class="file-input-box">
-                                                    <input type="file" id="fileInput1" />
-                                                    <label for="fileInput1">Прикрепить квитанцию</label>
-                                                    <div class="file-input-info">
-                                                        <div class="file-input-info-inner relative">
-                                                            <div class="attach-name"></div> <span
-                                                                class="attach-delete"></span>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <input type="submit" class="button btn block" value="Отправить" />
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div> -->
-
                         </form>
 
                     </div>
@@ -220,7 +180,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <div class="push35"></div>
+        <div class="push35" id="push35"></div>
         <div class="container">
             <div class="title-h2"><span class="red">Если у вас</span> задолжность</div>
             <div class="row">
@@ -263,7 +223,7 @@ get_header();
         </div>
         <div class="push10"></div>
     </div>
-    <div class="clients-middle">
+    <div class="clients-middle" id="clients-middle">
         <div class="push35"></div>
         <div class="container">
             <div class="title-h2"><span class="red">советы</span> и рекомендации</div>
@@ -453,7 +413,7 @@ get_header();
         <div class="push50"></div>
     </div>
 
-    <div class="faq">
+    <div class="faq" id="faq">
         <div class="push40"></div>
         <div class="container">
             <div class="title-h2"><span class="red">Часто задаваемые</span> вопросы</div>
@@ -540,21 +500,12 @@ get_header();
     <div class="for-print">
         <div class="title-h2"><span class="red">Наши </span>Реквизиты</div>
         <p>
-            МФО Турбозайм (ООО)<br />
-            123290, г. Москва, тупик Магистральный 1-й,<br />
-            д. 11, стр.10<br />
-            ИНН 7702820127<br />
-            КПП 771401001<br />
-            ОГРН 1137746702367<br />
-            р/с 40701810910310004455<br />
-            в Филиале 6318 ВТБ 24 (ПАО) В РКЦ Самара<br />
-            к/с 30101810700000000955<br />
-            БИК 043602955
+            <?php the_field('contact-details', 102) ?>
         </p>
     </div>
     <div class="row">
         <div class="col-xs-6">
-            <a href="#" class="button block">Скачать</a>
+            <a href="<?php echo home_url() ?>/download/307/" class="button block">Скачать</a>
         </div>
         <div class="col-xs-6">
             <a href="#" class="button block printBtn">Распечатать</a>
