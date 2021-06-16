@@ -168,8 +168,12 @@ get_header();
                     <div class="container">
                         <div class="title-h2"><span class="red">Сообщить о погашении </span> задолженности</div>
                         <div class="push10"></div>
+
                         <form class="rf">
-                            <div class="row">
+
+                            <?php echo do_shortcode('[contact-form-7 id="306" title="Форма о погашении"]') ?>
+
+                            <!-- <div class="row">
                                 <div class="col-md-6">
                                     <div class="row">
                                         <div class="col-sm-6">
@@ -207,8 +211,10 @@ get_header();
                                     </div>
 
                                 </div>
-                            </div>
+                            </div> -->
+
                         </form>
+
                     </div>
                     <div class="push20"></div>
                 </div>

@@ -28,13 +28,7 @@
     в удобное время.
   </p>
   <form class="rf">
-    <div class="form-group">
-      <input type="text" class="form-control required" placeholder="Имя" />
-    </div>
-    <div class="form-group">
-      <input type="text" class="form-control required tel" placeholder="Телефон" />
-    </div>
-    <input type="submit" class="button btn block" value="позвоните мне" />
+    <?php echo do_shortcode('[contact-form-7 id="305" title="Coll my"]') ?>
   </form>
 </div>
 
